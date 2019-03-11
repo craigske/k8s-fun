@@ -1,0 +1,11 @@
+version: '3'
+services:
+  example_service:
+    build: .
+    ports:
+    - "9000:9000"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+volumes:
+  logvolume01: {}
